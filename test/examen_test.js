@@ -40,5 +40,16 @@ describe("Juego", function () {
         expect(armaDecorada.obtenerDanho()).equals(45);
     });
 
+    it("Un guerrero de infanteria con arma de fuego, metal y madera deberia tener daño total de 50", function () {
+        let guerreroInfanteria = new Infanteria();
+        let armaDeHierro = new Metal();
+        let armaDeMadera = new Madera();
+        let armaDeFuego = new Fuego();
+        let armaDecorada = new DecoradorDeArma(armaDeFuego);
+        armaDecorada.decorarArma(armaDeHierro);
+        armaDecorada.decorarArma(armaDeMadera);
+        let guerrero = new Guerrero(guerreroInfanteria, armaDecorada);        
+        expect(guerrero.calcularDanhoTotal()).equals(55);
+    });
     
 });

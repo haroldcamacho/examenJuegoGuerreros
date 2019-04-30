@@ -8,7 +8,7 @@ class Guerrero {
         return this.guerrero.obtenerDanhoBase();
     }
     obtenerDanhoArma(){
-        return this.arma.calcularDanho();
+        return this.arma.obtenerDanho();
     }
 
     calcularDanhoTotal(){
